@@ -8,10 +8,18 @@
       test:
         runs-on: ubuntu-latest
         steps:
-          - uses: actions/checkout@v4
-          - uses: actions/setup-node@v4
+          - name: Checkout code
+            uses: actions/checkout@v2
+          - name: Set up Node.js
+            uses: actions/setup-node@v3
             with:
               node-version: 20
-          - uses: ./
+          - name: Run custom action
+            uses: ./
+          - name: Run custom action with input
+            uses: ./
+            with:
+              person: Batman
+    
     
           
