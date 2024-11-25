@@ -1,0 +1,5 @@
+name: saranyanaveen demo Action
+description: This action greets persons
+runs:
+  using: node 22
+  main: src/index.js
